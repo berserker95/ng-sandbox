@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
   selector: 'app-dashboard',
   imports: [NgFor],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
   examples: Signal<{ id: string; title: string; description: string }[]> = signal([
