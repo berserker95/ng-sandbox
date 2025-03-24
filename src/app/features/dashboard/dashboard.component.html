@@ -1,10 +1,10 @@
-<div>
-    <h1>Dashboard</h1>
-    <div class="card-container">
-        <div class="card" *ngFor="let example of examples(); trackBy: trackById"
-            (click)="navigateToExample(example.id)">
-            <h3>{{ example.title }}</h3>
-            <p>{{ example.description }}</p>
+<div class="p-5">
+    <h1 class="flex items-center justify-center text-2xl font-medium">Dashboard</h1>
+    <div class="flex flex-wrap p-6 gap-6">
+        <div *ngFor="let example of examples(); trackBy: trackById" (click)="navigateToExample(example.id)"
+           id="example-card" class="w-52 p-4 bg-gray-100 rounded-lg cursor-pointer transition-transform duration-300 shadow-md text-center hover:bg-gray-200 hover:scale-105">
+            <h3 class="text-lg">{{ example.title }}</h3>
+            <p class="text-sm text-gray-600 mt-2">{{ example.description }}</p>
         </div>
     </div>
 </div>
