@@ -1,0 +1,10 @@
+<div>
+    <h1>Dashboard</h1>
+    <div class="card-container">
+        <div class="card" *ngFor="let example of examples(); trackBy: trackById"
+            (click)="navigateToExample(example.id)">
+            <h3>{{ example.title }}</h3>
+            <p>{{ example.description }}</p>
+        </div>
+    </div>
+</div>
